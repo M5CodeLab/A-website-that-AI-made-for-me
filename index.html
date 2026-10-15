@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#080b12">
+  <meta name="description" content="M5 — توسعه‌دهنده و یادگیرنده امنیت؛ ساختن، شکستن، یاد گرفتن و تکرار.">
+  <title>M5 // NIGHT MODE — Personal Lab</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="starfield" aria-hidden="true"></canvas>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="scanline" aria-hidden="true"></div>
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="M5 home">
+      <span class="brand-mark">M<span>5</span></span>
+      <span class="brand-copy"><b>M5 // NIGHT MODE</b><small>PERSONAL LAB · EST. 2026</small></span>
+    </a>
+    <nav class="nav-links" aria-label="ناوبری اصلی">
+      <a href="#about">درباره</a><a href="#stack">تجهیزات</a><a href="#projects">پروژه‌ها</a><a href="#roadmap">مسیر</a>
+    </nav>
+    <div class="top-actions">
+      <span class="online"><i></i> سیستم آنلاین</span>
+      <button id="soundToggle" class="icon-btn" title="افکت صوتی رابط" aria-label="افکت صوتی رابط">♫</button>
+      <button id="menuToggle" class="icon-btn menu-toggle" aria-label="باز کردن منو">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero section-wrap" id="home">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="eyebrow-line"></span> DEVELOPER · SECURITY LEARNER · BUILDER</div>
+        <h1>من <span class="glitch" data-text="M5">M5</span> هستم<span class="accent">.</span><br>
+          <span class="headline-muted">در حال ساختنِ</span><br><span class="type-line" id="typeLine">چیزهایی که هنوز وجود ندارند</span><span class="caret">▍</span>
+        </h1>
+        <p class="hero-desc">از ترمینال لینوکس تا رابط‌های وب، از اسکریپت‌های کوچک تا آزمایش‌های سخت‌افزاری. اینجا دفترچه‌ی آزمایش‌های من است؛ نه یک رزومه‌ی بی‌روح.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#projects"><span>↘</span> دیدن آزمایشگاه</a>
+          <a class="btn btn-ghost" href="https://github.com/M5CodeLab" target="_blank" rel="noreferrer"><span class="github-icon">⌘</span> گیت‌هاب من</a>
+        </div>
+        <div class="hero-meta">
+          <div><span class="meta-label">MODE</span><b>LEARN / BUILD / REPEAT</b></div>
+          <div><span class="meta-label">CURRENT QUEST</span><b>CYBERSECURITY <span class="tiny-dot"></span></b></div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="visual-grid"></div>
+        <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
+        <div class="core-card">
+          <div class="core-top"><span>IDENTITY_CORE.exe</span><span class="core-dots">● ● ●</span></div>
+          <div class="avatar-frame">
+            <div class="avatar-halo"></div>
+            <div class="avatar">
+              <div class="hood"></div><div class="face"><span class="eye eye-l"></span><span class="eye eye-r"></span><span class="mask"></span></div>
+              <div class="hood-shadow"></div>
+              <div class="avatar-mark">M5</div>
+            </div>
+            <span class="crosshair crosshair-a">＋</span><span class="crosshair crosshair-b">＋</span>
+          </div>
+          <div class="core-info"><div><span class="status-square"></span> ID: M5CODELAB</div><span class="core-version">v.0.9.26</span></div>
+          <div class="core-bottom"><span>BUILDING IN PUBLIC</span><span class="pulse-bars"><i></i><i></i><i></i><i></i><i></i></span></div>
+        </div>
+        <div class="float-tag tag-top"><span>01</span> WEB DEV</div>
+        <div class="float-tag tag-bottom"><span>02</span> CYBER LAB</div>
+        <div class="vertical-label">CODE • SECURITY • HARDWARE • CHAOS</div>
+      </div>
+      <div class="hero-bottomline"><span>SCROLL TO EXPLORE</span><span class="scroll-arrow">↓</span><span class="line-fill"></span><span>41° / 55° // IMAGINARY COORDINATES</span></div>
+    </section>
+
+    <section class="ticker" aria-label="شعار">
+      <div class="ticker-track"><span>BUILD.</span><b>✳</b><span>BREAK.</span><b>✳</b><span>LEARN.</span><b>✳</b><span>REPEAT.</span><b>✳</b><span>BUILD.</span><b>✳</b><span>BREAK.</span><b>✳</b><span>LEARN.</span><b>✳</b><span>REPEAT.</span><b>✳</b></div>
+    </section>
+
+    <section class="section-wrap about-section" id="about">
+      <div class="section-kicker"><span>01 / PROFILE</span><span class="kicker-line"></span><span>WHO AM I?</span></div>
+      <div class="about-grid">
+        <div class="section-heading"><h2>کنجکاوی،<br><span class="outline-text">با دست‌های</span><br>کثیف از کد.</h2><p>یادگیری برای من وقتی واقعی می‌شود که چیزی بسازم، خرابش کنم و بفهمم چرا کار نکرد.</p></div>
+        <div class="about-content">
+          <p class="large-copy">من یک سازنده‌ی در حال رشد هستم؛ علاقه‌مند به <em>امنیت سایبری، توسعه وب، لینوکس و سخت‌افزار.</em> مسیرم هنوز تمام نشده—اتفاقاً همین بخش جذاب ماجراست.</p>
+          <div class="terminal-window">
+            <div class="terminal-title"><span class="terminal-lights"><i></i><i></i><i></i></span><span>m5@nightmode: ~/about</span><button id="copyTerminal" title="کپی متن ترمینال">کپی خروجی</button></div>
+            <div class="terminal-body" id="terminalText">
+              <p><span class="prompt">m5@lab</span>:<span class="path">~</span>$ whoami</p>
+              <p class="output">developer-in-progress</p>
+              <p><span class="prompt">m5@lab</span>:<span class="path">~</span>$ cat principles.txt</p>
+              <p class="output">Build. Break. Learn. Repeat.</p>
+              <p class="output">Curiosity > comfort</p>
+              <p><span class="prompt">m5@lab</span>:<span class="path">~</span>$ <span class="terminal-caret">_</span></p>
+            </div>
+          </div>
+          <div class="trait-row"><span># یادگیری عملی</span><span># پروژه‌محور</span><span># موزیک در پس‌زمینه</span><span># هنوز در حال رشد</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-wrap stack-section" id="stack">
+      <div class="section-kicker"><span>02 / LOADOUT</span><span class="kicker-line"></span><span>TOOLS & INTERESTS</span></div>
+      <div class="stack-head"><h2>جعبه‌ابزار <span class="accent">من</span></h2><p>مهارت‌ها در حال رشدند؛ این‌ها ابزارهایی هستند که با آن‌ها تجربه می‌کنم.</p></div>
+      <div class="skill-grid">
+        <article class="skill-card" data-skill="web"><div class="skill-icon">⌘</div><div class="skill-id">01 / FRONTEND</div><h3>Web Development</h3><p>HTML · CSS · JavaScript · Bootstrap · Swiper</p><div class="skill-meter"><span style="--level:76%"></span></div><small>ساخت رابط و تجربه‌ی کاربری</small></article>
+        <article class="skill-card" data-skill="security"><div class="skill-icon">⌬</div><div class="skill-id">02 / OFFENSE & DEFENSE</div><h3>Cybersecurity</h3><p>Linux · Bash · CTF · Networking</p><div class="skill-meter"><span style="--level:42%"></span></div><small>یادگیری پایه‌ها و آزمایش امن</small></article>
+        <article class="skill-card" data-skill="code"><div class="skill-icon">{ }</div><div class="skill-id">03 / PROGRAMMING</div><h3>Code & Logic</h3><p>C++ · Python · PHP · MySQL</p><div class="skill-meter"><span style="--level:48%"></span></div><small>از الگوریتم تا ابزارهای کوچک</small></article>
+        <article class="skill-card" data-skill="hardware"><div class="skill-icon">⌁</div><div class="skill-id">04 / MAKER LAB</div><h3>Hardware</h3><p>ESP32 · Arduino · Network Lab</p><div class="skill-meter"><span style="--level:28%"></span></div><small>ایده‌ها روی میز کار جان می‌گیرند</small></article>
+      </div>
+      <p class="skill-note"><span>ⓘ</span> نوارها نمایشی‌اند و خودارزیابی دقیق یا مدرک رسمی محسوب نمی‌شوند؛ هدف، ثبت مسیر پیشرفت است.</p>
+    </section>
+
+    <section class="section-wrap projects-section" id="projects">
+      <div class="section-kicker"><span>03 / FIELD NOTES</span><span class="kicker-line"></span><span>SELECTED PROJECTS</span></div>
+      <div class="projects-heading"><div><h2>چیزهایی که <span class="accent">ساخته‌ام.</span></h2><p>پروژه‌های کوچک، تمرین‌های واقعی و ایده‌هایی که در حال تبدیل شدن به کدند.</p></div><div class="project-counter"><strong id="projectCount">04</strong><span>LOGGED<br>PROJECTS</span></div></div>
+      <div class="filter-bar" role="group" aria-label="فیلتر پروژه‌ها">
+        <button class="filter-btn active" data-filter="all">همه <span>04</span></button><button class="filter-btn" data-filter="code">کدنویسی <span>02</span></button><button class="filter-btn" data-filter="security">امنیت <span>01</span></button><button class="filter-btn" data-filter="web">وب <span>01</span></button>
+      </div>
+      <div class="project-grid" id="projectGrid">
+        <article class="project-card" data-category="code"><div class="project-art art-cpp"><span class="art-code">#include &lt;iostream&gt;</span><span class="art-symbol">C<span>++</span></span><span class="art-caption">LEARN BY BUILDING</span></div><div class="project-content"><div class="project-meta"><span>CODE / 001</span><span class="project-status"><i></i> در حال یادگیری</span></div><h3>Cpp YouTube Course</h3><p>مخزن تمرین‌ها و نمونه‌کدهای مسیر یادگیری C++؛ قدم‌به‌قدم از مفاهیم پایه.</p><div class="tag-list"><span>C++</span><span>Learning</span><span>GitHub</span></div><a href="https://github.com/M5CodeLab/Cpp-Youtube-Course" target="_blank" rel="noreferrer" class="project-link">مشاهده در گیت‌هاب <b>↗</b></a></div></article>
+        <article class="project-card" data-category="security"><div class="project-art art-scan"><div class="radar-ring"></div><div class="radar-sweep"></div><span class="scan-text">SCANNING LOCALHOST<span class="blink">_</span></span><span class="scan-port">PORT / 22 · 80 · 443</span></div><div class="project-content"><div class="project-meta"><span>SECURITY / 002</span><span class="project-status"><i></i> آزمایشگاهی</span></div><h3>Port Scanner</h3><p>ابزار سبک برای آشنایی با پورت‌ها و مفاهیم شبکه؛ فقط روی سیستم‌ها و مقصدهای مجاز تست شود.</p><div class="tag-list"><span>Python</span><span>Networking</span><span>CLI</span></div><a href="https://github.com/M5CodeLab/port-scanner" target="_blank" rel="noreferrer" class="project-link">مشاهده در گیت‌هاب <b>↗</b></a></div></article>
+        <article class="project-card" data-category="web"><div class="project-art art-captcha"><div class="captcha-box"><span>ACCESS CHECK</span><strong>□ △ ○</strong><small>HUMAN VERIFICATION</small></div><span class="art-corner">ACCESSIBILITY FIRST</span></div><div class="project-content"><div class="project-meta"><span>WEB / 003</span><span class="project-status"><i></i> نسخه‌ی اولیه</span></div><h3>Senior-Friendly CAPTCHA</h3><p>نمونه‌ی CAPTCHA با تمرکز بر خوانایی و دسترس‌پذیری؛ اتصال سمت سرور می‌تواند توسعه‌اش دهد.</p><div class="tag-list"><span>HTML</span><span>CSS</span><span>Accessibility</span></div><a href="https://github.com/M5CodeLab/senior-friendly-captcha" target="_blank" rel="noreferrer" class="project-link">مشاهده در گیت‌هاب <b>↗</b></a></div></article>
+        <article class="project-card" data-category="code"><div class="project-art art-bash"><span class="bash-prompt">$ ./passgen.sh</span><div class="password-lines"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><span class="bash-output">[+] secure output ready</span></div><div class="project-content"><div class="project-meta"><span>CLI / 004</span><span class="project-status"><i></i> ابزار شخصی</span></div><h3>passgen.sh</h3><p>تولیدکننده‌ی رمز عبور در Bash با استفاده از داده‌های تصادفی سیستم و چند حالت خروجی.</p><div class="tag-list"><span>Bash</span><span>Linux</span><span>CLI</span></div><a href="https://github.com/M5CodeLab" target="_blank" rel="noreferrer" class="project-link">پروفایل پروژه‌ها <b>↗</b></a></div></article>
+      </div>
+      <div class="project-foot"><span class="foot-cross">✳</span> هر پروژه یک لاگ از چیزهایی است که دیروز بلد نبودم.</div>
+    </section>
+
+    <section class="quote-section">
+      <div class="quote-mark">“</div><blockquote>قرار نیست از اول حرفه‌ای باشم.<br>قرار است <span>هر بار کمی بهتر</span> از قبل برگردم.</blockquote><div class="quote-signature">— M5 / PERSONAL LOG</div>
+      <div class="quote-decoration">LEARN<br>IN PUBLIC</div>
+    </section>
+
+    <section class="section-wrap roadmap-section" id="roadmap">
+      <div class="section-kicker"><span>04 / NEXT OBJECTIVES</span><span class="kicker-line"></span><span>ROADMAP</span></div>
+      <div class="roadmap-head"><h2>مرحله‌ی بعدی <span class="accent">چیست؟</span></h2><p>یک مسیر بلندمدت، با قدم‌های کوچک و قابل انجام.</p></div>
+      <div class="roadmap">
+        <div class="roadmap-line"></div>
+        <article class="road-item completed"><div class="road-node">✓</div><div class="road-date">PHASE 01 · STARTED</div><h3>ساختن پایه‌ها</h3><p>تمرین وب، GitHub، لینوکس و آشنایی با منطق برنامه‌نویسی.</p><span class="road-state">IN PROGRESS / FOUNDATIONS</span></article>
+        <article class="road-item current"><div class="road-node">02</div><div class="road-date">PHASE 02 · CURRENT</div><h3>کدنویسی منظم‌تر</h3><p>Python، الگوریتم‌ها، شبکه و پروژه‌های کوچک که واقعاً کار می‌کنند.</p><span class="road-state">● CURRENT OBJECTIVE</span></article>
+        <article class="road-item"><div class="road-node">03</div><div class="road-date">PHASE 03 · NEXT</div><h3>آزمایشگاه امنیت</h3><p>CTF، مفاهیم وب‌سکیوریتی و تمرین قانونی در محیط‌های کنترل‌شده.</p><span class="road-state">LOCKED / KEEP LEARNING</span></article>
+        <article class="road-item"><div class="road-node">04</div><div class="road-date">PHASE 04 · LONG TERM</div><h3>دانشگاه و فرصت‌های جهانی</h3><p>تقویت زبان، سوابق تحصیلی و پورتفولیو برای فرصت‌های تحصیل و کار بین‌المللی.</p><span class="road-state">LONG-TERM QUEST</span></article>
+      </div>
+    </section>
+
+    <section class="contact-section section-wrap" id="contact">
+      <div class="contact-panel"><div class="contact-grid"></div><div class="contact-copy"><div class="section-kicker"><span>05 / OPEN CHANNEL</span><span class="kicker-line"></span><span>CONNECT</span></div><h2>ایده‌ای داری؟<br><span class="accent">بیا بسازیمش.</span></h2><p>همکاری، پروژه‌ی متن‌باز، یا فقط گفت‌وگو درباره‌ی کد و امنیت. کانال باز است.</p><div class="contact-links"><a href="https://github.com/M5CodeLab" target="_blank" rel="noreferrer">GitHub <span>↗</span></a><a href="https://t.me/M5_CodeLab" target="_blank" rel="noreferrer">Telegram <span>↗</span></a><a href="https://www.youtube.com/@M5CodeLab" target="_blank" rel="noreferrer">YouTube <span>↗</span></a></div></div><div class="contact-terminal"><div class="ct-top"><span>TRANSMISSION.LOG</span><span class="online"><i></i> READY</span></div><div class="ct-content"><span class="ct-dim">[19:26:06] channel initialized</span><span>[19:26:07] waiting for signal...</span><span class="ct-green">[ OK ] public links available</span><span class="ct-blink">_</span></div><div class="ct-bottom">ENCRYPTION: VIBES ONLY</div></div></div>
+    </section>
+  </main>
+
+  <footer class="footer"><a class="footer-brand" href="#home">M5<span>_</span></a><span>© 2026 M5CodeLab · ساخته‌شده با کنجکاوی و کافئین.</span><a href="#home" class="back-top">بازگشت به بالا ↑</a></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
